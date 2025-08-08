@@ -13,5 +13,6 @@ public class DeepCopyArray {
 
         copy[0] = 100;
         System.out.println(original[0]); //1 -> 영향 X
+
     }
 }
