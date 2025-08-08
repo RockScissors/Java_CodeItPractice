@@ -14,5 +14,13 @@ public class DeepCopyArray {
         copy[0] = 100;
         System.out.println(original[0]); //1 -> 영향 X
 
+        System.out.println(original == copy); //배열의 주소 비교
+        System.out.println(original.equals(copy));
+        //주소 비교. Integer, String... 같은 클래스들은 메소드를 오버라이딩 해서
+        //값 비교가 되는데 배열은 원래의 메소드 그대로 주소 비교
+
+        //배열의 값을 비교하고 싶으면
+        //import java.util.Arrays;를 한 뒤
+        //System.out.println(Arrays.Equals(original, copy));
     }
 }
