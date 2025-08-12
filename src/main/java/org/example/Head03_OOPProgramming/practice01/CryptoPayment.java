@@ -1,4 +1,4 @@
-package org.example.Head03_OOPProgramming.practice;
+package org.example.Head03_OOPProgramming.practice01;
 
 public class CryptoPayment implements Payment{
     @Override

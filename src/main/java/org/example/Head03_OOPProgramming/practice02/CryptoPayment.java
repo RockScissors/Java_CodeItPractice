@@ -1,8 +1,9 @@
-package org.example.Head03_OOPProgramming.practice01;
+package org.example.Head03_OOPProgramming.practice02;
 
-public class CryptoPayment implements Payment{
+public class CryptoPayment extends AbstractPayment {
     @Override
     public void pay(double amount) {
+
         System.out.println("암호화폐로 " + amount + "원 결제완료.");
     }
 }

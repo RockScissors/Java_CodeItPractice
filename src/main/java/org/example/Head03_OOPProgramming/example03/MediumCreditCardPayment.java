@@ -1,4 +1,7 @@
 package org.example.Head03_OOPProgramming.example03;
 
-public class MediumCreditCardPayment {
+public class MediumCreditCardPayment implements Payment{
+    public void pay(double amount) {
+        System.out.println("중간 금액(신용카드) 결제: " + amount + "원");
+    }
 }
