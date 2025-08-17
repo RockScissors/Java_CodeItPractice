@@ -15,16 +15,20 @@ public class ArrayListExample {
         arrayList.add("Cherry");
 
 
-        System.out.println("After add: " + arrayList.toString());
+        //println은 내부적으로 알아서 객체의 toString() 메소드를 호출해 문자열로
+        //바꾼 뒤에, 결과를 화면에 출력해준다는 약속을 가지고 있음.
+        //즉 System.out.println(arrayList);라는 코드를 쓰면,
+        //자바는 뒤에서 자동으로 System.out.println(arrayList.toString()); 으로 바꿔 실행
+        System.out.println("After add: " + arrayList);
 
         System.out.println("First Fruit: " + arrayList.get(0));
 
         arrayList.remove(1);
-        System.out.println("After remove index 1: " + arrayList.toString());
+        System.out.println("After remove index 1: " + arrayList);
 
         System.out.println("List size: " + arrayList.size());
 
         arrayList.clear();
-        System.out.println("After clear: " + arrayList.toString());
+        System.out.println("After clear: " + arrayList);
     }
 }
