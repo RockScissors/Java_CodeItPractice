@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 //JFC : Map 인터페이스 (키-값으로 데이터 저장. 키는 중복 X)
+//Key 값은 null 불가, Value 값은 null 가능
 //이미 존재하는 키로 다시 put() 호출 시 값을 덮어쓴다.
 public class HashMapExample {
     public static void main(String[] args) {
