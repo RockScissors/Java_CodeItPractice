@@ -21,6 +21,12 @@ public class StudentManager {
     public void addStudent(Student student, int score){
         //중복 이름 체크
         if(studentNames.contains(student.getName())){
+            //List.contains() 가 아닌 Set.contains(HashSet)를 사용한 이유
+            //탐색 효율성(성능)과 코드의 의도(가독성)
+            //List로 탐색 시 맨 처음 인덱스부터 하나하나 확인.
+            //HashSet로 탐색 시 해시코드를 이용해 데이터 보관. -> O(1)의 시간복잡도
+            //또한, Set으로 선언된 코드를 보며 '중복 없이 관리하는 집합이군'이라고
+            //변수의 역할과 목적을 즉시 파악할 수 있다.
             System.out.println("[Error] 이미 존재하는 학생 이름입니다.");
             return;
         }
