@@ -19,6 +19,54 @@ public class StudentManager {
     }
 
     public void addStudent(Student student, int score){
+        //중복 이름 체크
+        if(studentNames.contains(student.getName())){
+            System.out.println("[Error] 이미 존재하는 학생 이름입니다.");
+            return;
+        }
+        //등록
+        students.add(student);
+        studentNames.add(student.getName());
+        scoreMap.put(student.getName(), score);
+        System.out.println("[Info] 새로운 학생이 등록되었습니다: \n" + student);
+    }
 
+    public void removeStudent(String name){
+        //이름을 통해 학생 찾기
+        Student target = null;
+        for(Student s : students){
+            if(s.getName().equals(name)){
+                target = s;
+                break;
+            }
+        }
+
+        //해당 학생 리스트에 존재하는 경우 학생 삭제, 존재하지 않는 경우 에러 메시지 출력
+        if(target != null){
+            students.remove(target);
+            studentNames.remove(name);
+            scoreMap.remove(name);
+            System.out.println("[Info] 학생이 삭제되었습니다: " + name);
+        } else {
+            System.out.println("[Error] 해당 이름의 학생을 찾을 수 없습니다.");
+        }
+    }
+
+    //모든 학생 정보 출력
+    public void printAllStudents(){
+        System.out.println("=== 학생 목록 ===");
+        for(Student s : students){
+            System.out.println(s);
+        }
+    }
+
+    //점수 출력
+    public void printScore(String name){
+        Integer score = scoreMap.get(name);
+        if(score != null){
+            System.out.println("[Info] " + name + "의 점수: " + score);
+        } else {
+            System.out.println("[Error] 점수를 찾을 수 없습니다.");
+        }
     }
 }

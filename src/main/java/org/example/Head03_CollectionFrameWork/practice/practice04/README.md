@@ -1,1 +1,1 @@
-### StudentManageMent 실습
+### StudentManageMent Practice
